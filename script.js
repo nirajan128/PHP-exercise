@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Select the form element
   const form = document.getElementById('tempForm')
+  const gradeform = document.getElementById('grade')
 
   // Add an event listener to handle form submission
   form.addEventListener('submit', event => {
@@ -22,6 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         // Update the result on the page
         document.getElementById('result').innerText = data
+      })
+      .catch(error => {
+        console.error('Error:', error)
+      })
+  })
+
+  gradeform.addEventListener('submit', event => {
+    event.preventDefault()
+    const gradeInput = document.getElementById('gradeInput').value
+    const query = `gradeInput=${encodeURIComponent(gradeInput)}`
+
+    fetch(`grades.php?${query}`)
+      .then(response => response.text())
+      .then(data => {
+        // Update the result on the page
+        document.getElementById('result2').innerText = data
       })
       .catch(error => {
         console.error('Error:', error)
