@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   //Even Odd
+  //The name of the query must match the const where the value is stored
   evenOddForm.addEventListener('submit', event => {
     event.preventDefault()
     const evenOddValue = document.getElementById('evenOddInput').value

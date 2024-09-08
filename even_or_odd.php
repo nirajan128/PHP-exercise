@@ -1,5 +1,5 @@
 <?php 
-  $input1 = $_GET['evenOddValue'];
+  $input1 = $_GET['evenOdd'];
 
   if($input1 % 2 === 0){
     echo 'The number is even';
