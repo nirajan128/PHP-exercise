@@ -32,13 +32,39 @@
           <p id="result" class="mt-3"></p>
         </div>
 
+        <!-- Grades -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
           <form id="grade">
-            <label for="gradeCalculator">Enter Your grade</label>
-            <input type="number" name="gradeCalculator" id="gradeInput" />
+            <div class="mb-3">
+              <label for="gradeCalculator" class="form-label"
+                >Enter Your grade</label
+              >
+              <input
+                type="number"
+                name="gradeCalculator"
+                id="gradeInput"
+                class="form-control"
+              />
+            </div>
+
             <button type="submit" class="btn btn-primary">Convert</button>
           </form>
           <p id="result2" class="mt-3"></p>
+        </div>
+
+        <!-- Even -odd -->
+        <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <form id="evenOddForm">
+            <label for="evenOdd">Enter a number</label>
+            <input
+              type="number"
+              name="evenOdd"
+              id="evenOddInput"
+              class="form-control"
+            />
+            <button type="submit" class="btn btn-primary mt-3">Check</button>
+          </form>
+          <p id="result3" class="mt-3"></p>
         </div>
       </div>
     </div>
