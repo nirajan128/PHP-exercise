@@ -71,8 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
     'yearValue'
   )
   handleFormSubmit('dowForm', 'dowInput', 'result6', 'dow.php', 'dowValue')
+  handleFormSubmit(
+    'factorialForm',
+    'factorialInput',
+    'result7',
+    'factorial.php',
+    'factorialValue'
+  )
 })
 
+//Other way of doing it
 /* document.addEventListener('DOMContentLoaded', () => {
   // Select the form element
   const form = document.getElementById('tempForm')
