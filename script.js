@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('tempForm')
   const gradeform = document.getElementById('grade')
   const evenOddForm = document.getElementById('evenOddForm')
+  const ageForm = document.getElementById('ageForm')
 
   // Add an event listener to handle form submission
   //temperature converter
@@ -59,6 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         // Update the result on the page
         document.getElementById('result3').innerText = data
+      })
+      .catch(error => {
+        console.error('Error:', error)
+      })
+  })
+
+  //age price
+  ageForm.addEventListener('submit', event => {
+    event.preventDefault()
+    const ageValue = document.getElementById('ageInput').value
+    const query = `ageValue=${ageValue}`
+    fetch(`ticket_price.php?${query}`)
+      .then(response => response.text())
+      .then(data => {
+        // Update the result on the page
+        document.getElementById('result4').innerText = data
       })
       .catch(error => {
         console.error('Error:', error)
