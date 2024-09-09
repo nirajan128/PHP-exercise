@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'leap_year.php',
     'yearValue'
   )
+  handleFormSubmit('dowForm', 'dowInput', 'result6', 'dow.php', 'dowValue')
 })
 
 /* document.addEventListener('DOMContentLoaded', () => {
