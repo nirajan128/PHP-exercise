@@ -133,4 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'startInput',
     'endInput'
   )
+
+  //Dice Rolling functions
+  function diceRoller (formId, resultId, phpFile) {
+    const theForm = document.getElementById(formId)
+  }
 })
