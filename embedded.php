@@ -11,5 +11,9 @@
      <?php
       echo "Hello World";
      ?>
+
+     <script>
+        console.log("hello"   <?php echo "Hello from Php"; ?>);
+     </script>
 </body>
 </html>

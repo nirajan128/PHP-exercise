@@ -1,6 +1,6 @@
 //Efficient way of doing it!
 document.addEventListener('DOMContentLoaded', () => {
-  // Separate logic for temperature form
+  // Separate logic for temperature form 1
   const tempForm = document.getElementById('tempForm')
   tempForm.addEventListener('submit', event => {
     event.preventDefault() // Prevent the default form submission
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
   })
 
-  // Reusable function to handle form submissions for other forms since they share similar functionalities
+  // Reusable function to handle form submissions for other forms[2,3,4,5,6,7] since they share similar functionalities
   const handleFormSubmit = (formId, inputId, resultId, phpFile, queryParam) => {
     const form = document.getElementById(formId)
     form.addEventListener('submit', event => {
@@ -78,6 +78,27 @@ document.addEventListener('DOMContentLoaded', () => {
     'factorial.php',
     'factorialValue'
   )
+})
+
+//A bit advance problems
+const multForm = document.getElementById('multForm')
+
+multForm.addEventListener('submit', event => {
+  event.preventDefault()
+  const multInput1 = document.getElementById('multInput1').value
+  const multInput2 = document.getElementById('multInput2').value
+
+  query = `multInput1=${multInput1}&multInput2=${multInput2}`
+
+  fetch(`mult_table.php?${query}`)
+    .then(response => response.text())
+    .then(data => {
+      // Update the result on the page
+      document.getElementById('result8').innerHTML = data
+    })
+    .catch(error => {
+      console.error('Error:', error)
+    })
 })
 
 //Other way of doing it
