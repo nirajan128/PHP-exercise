@@ -137,5 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
   //Dice Rolling functions
   function diceRoller (formId, resultId, phpFile) {
     const theForm = document.getElementById(formId)
+    theForm.addEventListener('submit', event => {
+      event.preventDefault()
+      fetch(phpFile)
+        .then(response => response.text())
+        .then(data => {
+          // Update the result on the page
+          document.getElementById(resultId).innerHTML = data
+          console.log('Connected')
+        })
+        .catch(error => {
+          console.error('Error:', error)
+        })
+    })
   }
+  diceRoller('diceRollForm', 'result10', 'dice_roll.php')
 })
