@@ -81,25 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 //A bit advance problems
-const multForm = document.getElementById('multForm')
 
-multForm.addEventListener('submit', event => {
-  event.preventDefault()
-  const multInput1 = document.getElementById('multInput1').value
-  const multInput2 = document.getElementById('multInput2').value
+//Multiplication table
+const evenListForm = document.getElementById('evenListForm')
 
-  query = `multInput1=${multInput1}&multInput2=${multInput2}`
+function multipleHandleFormSubmit (
+  formId,
+  inputId1,
+  inputId2,
+  resultId,
+  phpFile,
+  queryParam1,
+  queryParam2
+) {
+  const theForm = document.getElementById(formId)
 
-  fetch(`mult_table.php?${query}`)
-    .then(response => response.text())
-    .then(data => {
-      // Update the result on the page
-      document.getElementById('result8').innerHTML = data
-    })
-    .catch(error => {
-      console.error('Error:', error)
-    })
-})
+  theForm.addEventListener('submit', event => {
+    event.preventDefault()
+    const inputValue1 = document.getElementById(inputId1).value
+    const inputValue2 = document.getElementById(inputId2).value
+    const query = `${queryParam1}=${inputValue1}&${queryParam2}=${inputValue2}`
+    fetch(`${phpFile}?${query}`)
+      .then(response => response.text())
+      .then(data => {
+        // Update the result on the page
+        document.getElementById(resultId).innerHTML = data
+      })
+      .catch(error => {
+        console.error('Error:', error)
+      })
+  })
+}
+
+multipleHandleFormSubmit(
+  'multForm',
+  'multInput1',
+  'multInput2',
+  'result8',
+  'mult_table.php',
+  'startInput',
+  'endInput'
+)
 
 //Other way of doing it
 /* document.addEventListener('DOMContentLoaded', () => {

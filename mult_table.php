@@ -1,7 +1,7 @@
 <?php
 // Ensure both inputs are set and numeric, if not set the default 1 for input 1 and 10 for input 2
-$input1 = isset($_GET['multInput1']) && is_numeric($_GET['multInput1']) ? (int)$_GET['multInput1'] : 1;
-$input2 = isset($_GET['multInput2']) && is_numeric($_GET['multInput2']) ? (int)$_GET['multInput2'] : 10;
+$input1 = isset($_GET['startInput']) && is_numeric($_GET['startInput']) ? (int)$_GET['startInput'] : 1;
+$input2 = isset($_GET['endInput']) && is_numeric($_GET['endInput']) ? (int)$_GET['endInput'] : 10;
 
 // Ensure input1 is less than or equal to input2
 if ($input1 > $input2) {
