@@ -152,4 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   diceRoller('diceRollForm', 'result10', 'dice_roll.php')
+  diceRoller('fancierDiceRollForm', 'result11', 'fancier_dice.php')
 })
