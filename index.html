@@ -9,13 +9,31 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <style>
+    p {
+      font-weight: bold;
+      background-color: lightskyblue;
+    }
+  </style>
+  <body class="bg-light">
     <h1 class="text-center">PHP Basics</h1>
+    <a href="https://github.com/nirajan128" class="text-center"
+      >@Nirajan Shrestha</a
+    >
+    <p class="text-center">
+      All exercises question were provided by
+      <a href="https://mohawkcollege.ca/">Mohawk College</a>
+    </p>
     <div
       class="container d-flex flex-column justify-content-center align-items-center"
     >
       <div class="row">
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-3">
+            A PHP script that converts a temperature (input1) from Fahrenheit to
+            Celsius if input2 is true, and from Celsius to Farenheit if input2
+            is false.
+          </p>
           <form id="tempForm">
             <div class="mb-3">
               <label for="temp" class="form-label">Enter a degree:</label>
@@ -35,6 +53,19 @@
         <!-- Grades -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
           <form id="grade">
+            <p class="p-2">
+              a PHP script that takes a student's numerical grade as input1 and
+              prints the corresponding letter grade based on the following
+              scale:
+            </p>
+            <ul>
+              <li>90 and above: A</li>
+              <li>80 to 89: B</li>
+              <li>70 to 79: C</li>
+              <li>60 to 69: D</li>
+              <li>Below 60: E</li>
+            </ul>
+
             <div class="mb-3">
               <label for="gradeCalculator" class="form-label"
                 >Enter Your grade</label
@@ -54,6 +85,10 @@
 
         <!-- Even -odd -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            APHP script that takes an integer as input1 and determines if it is
+            even or odd. Print the result accordingly.
+          </p>
           <form id="evenOddForm">
             <label for="evenOdd">Enter a number</label>
             <input
@@ -69,6 +104,17 @@
 
         <!-- Ticket checker -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            A PHP script that calculates the ticket price for a movie based on
+            the age (input1) of the viewer
+          </p>
+          <ul class="bg-secondary">
+            <li>Children (ages 0 to 5): Free</li>
+            <li>Youth (ages 6 to 17): $8</li>
+            <li>Adults (ages 18 to 64): $12</li>
+            <li>Seniors (ages 65 and above): $10</li>
+          </ul>
+
           <form id="ageForm">
             <label for="ageInput">Enter Your age</label>
             <input
@@ -86,6 +132,11 @@
 
         <!-- Leap Year -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            A PHP script that checks if a given year (input1) is a leap year or
+            not. A leap year is divisible by 4 but not by 100, except when it is
+            divisible by 400.
+          </p>
           <form id="yearForm">
             <label for="ageInput">Enter a Year</label>
             <input
@@ -103,6 +154,11 @@
 
         <!-- Day of week -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            a PHP script that takes an integer (1 to 7) as input1 and prints the
+            corresponding day of the week, where 1 represents Monday, 2
+            represents Tuesday, and so on.
+          </p>
           <form id="dowForm">
             <label for="ageInput">Enter a Day</label>
             <input
@@ -120,6 +176,10 @@
 
         <!-- Factorial -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            a PHP script that calculates and prints the factorial of a given
+            positive integer (input1).
+          </p>
           <form id="factorialForm">
             <label for="factorialInput">Enter a Number</label>
             <input
@@ -138,8 +198,15 @@
 
       <div class="row">
         <h3>A bit advanced</h3>
+
         <!-- Multiplication Table -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            a PHP script that generates a multiplication table from $input1 up
+            to $input2 inclusive. Generate the result as an HTML table that
+            includes a table header row along the top and down the leftmost
+            column.
+          </p>
           <form id="multForm">
             <label for="multInput1">Enter a Start Number</label>
             <input
@@ -164,6 +231,10 @@
 
         <!-- Even List -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            a PHP script that displays all the even numbers from $input1 to
+            $input2, inclusive, in an unordered list.
+          </p>
           <form id="evenListForm">
             <label for="evenListInput1">Enter a Start Number</label>
             <input
@@ -188,6 +259,15 @@
 
         <!-- Dice rolling app -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            When the button is clicked, an AJAX call will happen that asks your
+            PHP program, for 5 "dice" values. These dice are random values,
+            simulating a “roll” of 5 dice with 6 sides each. Your program will
+            output HTML code that the AJAX call will display. Each die roll
+            should be in a separate HTML element . Include BootStrap classes in
+            your output to help make it more interesting and appealing. Use
+            rand(1,6) to generate the random integers
+          </p>
           <form id="diceRollForm">
             <button type="submit" class="btn btn-primary mt-3">
               Roll Dice
@@ -198,6 +278,13 @@
 
         <!-- Fancier dice roller -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            In addition to the dice rolling feature of the dice rolling app,
+            change the output so that any of the dice that roll a 1 are shown in
+            red with white text. Have all other dice follow a different colour
+            scheme of your choice. Hint: You may assume that BootStrap will be
+            loaded client side.
+          </p>
           <form id="fancierDiceRollForm">
             <button type="submit" class="btn btn-primary mt-3">
               Roll Dice Fancier
@@ -209,6 +296,15 @@
         <!-- Password Generator -->
         <div class="col-sm-12 col-md-6 border border-dark p-3">
           <form id="passwordForm">
+            <p class="p-2">
+              Create a PHP script that creates a string containing 5 comma
+              separated temporary passwords, and provides the string back to the
+              AJAX client-side call. The temporary passwords should each be a
+              random mix of upper- and lower-case letters and digits of length
+              16. (HINT: Use rand for random numbers and the chr function to
+              convert an ASCII code to a string. See http://www.asciitable.com/
+              for ASCII codes.)
+            </p>
             <button type="submit" class="btn btn-primary mt-3">
               Generate Password
             </button>
@@ -217,6 +313,14 @@
         </div>
 
         <div class="col-sm-12 col-md-6 border border-dark p-3">
+          <p class="p-2">
+            A php script that displays the current time in an element the format
+            hh:mm:ss. If it’s night, show it in dark color. If it’s daytime,
+            show it in a bright color. Find a sun and a moon image online and
+            display the appropriate image as well. You may assume that BootStrap
+            has been loaded client-side. You will have to research the use of
+            the date functionLinks to an external site. for this.
+          </p>
           <div id="result14"></div>
         </div>
       </div>
